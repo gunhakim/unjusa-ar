@@ -4,4 +4,7 @@
 ## 운주사의 탑/불상의 3d 모델링  
 1. 탑/불상의 사진 촬영  
 탑/불상의 360도 뷰를 촬영
-사용 카메라: iPhone X, Samsung Galaxy S10, dji mavix2 zoom
+사용 카메라: iPhone X, Samsung Galaxy S10, dji mavix2 zoom  
+2. photogrammetry를 이용항 3d 모델 생성
+photoscan을 사용
+![Alt text](/demo/photoscan.png)
