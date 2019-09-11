@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uq9-ia-kgY">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ar view-->
+        <scene sceneID="O4s-2t-F3l">
+            <objects>
+                <viewController id="4VY-Zt-h0D" customClass="ar_view" customModule="artest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoh-sX-IGv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipl-xx-PxE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57o-aw-ehh">
+                                <rect key="frame" x="50" y="824" width="314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUh-Xm-0L3">
+                                <rect key="frame" x="360" y="819" width="34" height="30"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="Uq9-ia-kgY" kind="show" id="rsg-B6-CDQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="57o-aw-ehh" firstAttribute="top" secondItem="ipl-xx-PxE" secondAttribute="bottom" constant="12" id="7sU-Qz-tvp"/>
+                            <constraint firstItem="iyr-kZ-QYq" firstAttribute="trailing" secondItem="57o-aw-ehh" secondAttribute="trailing" constant="50" id="8Ga-wy-ifk"/>
+                            <constraint firstItem="iyr-kZ-QYq" firstAttribute="trailing" secondItem="FUh-Xm-0L3" secondAttribute="trailing" constant="20" id="CyM-bf-zBD"/>
+                            <constraint firstItem="iyr-kZ-QYq" firstAttribute="trailing" secondItem="ipl-xx-PxE" secondAttribute="trailing" id="Uhb-kD-xXX"/>
+                            <constraint firstItem="ipl-xx-PxE" firstAttribute="leading" secondItem="iyr-kZ-QYq" secondAttribute="leading" id="ZsO-6s-5eK"/>
+                            <constraint firstItem="iyr-kZ-QYq" firstAttribute="bottom" secondItem="ipl-xx-PxE" secondAttribute="bottom" constant="50" id="dvw-WS-drs"/>
+                            <constraint firstItem="57o-aw-ehh" firstAttribute="leading" secondItem="iyr-kZ-QYq" secondAttribute="leading" constant="50" id="mKG-dg-kwz"/>
+                            <constraint firstItem="ipl-xx-PxE" firstAttribute="top" secondItem="iyr-kZ-QYq" secondAttribute="top" id="yI8-Wf-HxC"/>
+                            <constraint firstItem="FUh-Xm-0L3" firstAttribute="top" secondItem="ipl-xx-PxE" secondAttribute="bottom" constant="7" id="z13-Hd-Bua"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iyr-kZ-QYq"/>
+                    </view>
+                    <connections>
+                        <outlet property="arview" destination="ipl-xx-PxE" id="6YP-10-1Hc"/>
+                        <outlet property="label" destination="57o-aw-ehh" id="e7S-b7-jQl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUS-Xe-MWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1343" y="15"/>
+        </scene>
+        <!--Homeview-->
+        <scene sceneID="AIi-ea-pwY">
+            <objects>
+                <viewController id="Uq9-ia-kgY" customClass="Homeview" customModule="artest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fN7-lj-vPu" customClass="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-SH-Fo9">
+                                <rect key="frame" x="50" y="134" width="52" height="30"/>
+                                <state key="normal" title="삼층석탑"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="tower_1" id="2ET-a8-Wiu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Q3-0f-5gu">
+                                <rect key="frame" x="100" y="134" width="214" height="30"/>
+                                <state key="normal" title="석불군마구역"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="buddha_1" id="3PL-wS-dmy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="198-gR-Rrv">
+                                <rect key="frame" x="331" y="134" width="33" height="30"/>
+                                <state key="normal" title="석상1"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="buddha_2" id="J9r-6j-i5s"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="운주사 AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPJ-37-x03">
+                                <rect key="frame" x="50" y="66" width="314" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsR-H5-dQ6">
+                                <rect key="frame" x="168" y="237" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="광배석불좌상"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="buddha_4" id="QGr-0T-Joj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xag-Dq-7xd">
+                                <rect key="frame" x="59" y="237" width="35" height="30"/>
+                                <state key="normal" title="석상2"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="buddha_3" id="zre-DS-IlY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="423-7X-zcX">
+                                <rect key="frame" x="165" y="644" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="원반형석탑"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7l-d3-S7e">
+                                <rect key="frame" x="315" y="237" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="사층석탑"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="tower_4" id="cXO-zq-TA9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uY-Wg-NlL">
+                                <rect key="frame" x="63" y="339" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="명당탑"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="tower_6" id="sGV-B2-CEF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGw-hJ-57a">
+                                <rect key="frame" x="176" y="339" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="석조불감앞칠승석탑"/>
+                                <connections>
+                                    <segue destination="4VY-Zt-h0D" kind="show" identifier="dtower_2" id="Ily-iM-sLC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oBV-SH-Fo9" firstAttribute="leading" secondItem="dpW-ZC-D9l" secondAttribute="leading" constant="50" id="As5-rm-R7c"/>
+                            <constraint firstItem="6Q3-0f-5gu" firstAttribute="top" secondItem="JPJ-37-x03" secondAttribute="bottom" constant="36" id="G8Z-Tf-gZp"/>
+                            <constraint firstItem="JPJ-37-x03" firstAttribute="leading" secondItem="dpW-ZC-D9l" secondAttribute="leading" constant="50" id="ReI-wL-a1t"/>
+                            <constraint firstItem="JPJ-37-x03" firstAttribute="top" secondItem="dpW-ZC-D9l" secondAttribute="top" constant="22" id="UqM-l4-BSd"/>
+                            <constraint firstItem="xag-Dq-7xd" firstAttribute="top" secondItem="oBV-SH-Fo9" secondAttribute="bottom" constant="73" id="XKb-Yx-EcG"/>
+                            <constraint firstItem="dpW-ZC-D9l" firstAttribute="trailing" secondItem="JPJ-37-x03" secondAttribute="trailing" constant="50" id="ahR-VW-HVo"/>
+                            <constraint firstItem="dpW-ZC-D9l" firstAttribute="trailing" secondItem="198-gR-Rrv" secondAttribute="trailing" constant="50" id="clm-JA-pJW"/>
+                            <constraint firstItem="dpW-ZC-D9l" firstAttribute="trailing" secondItem="6Q3-0f-5gu" secondAttribute="trailing" constant="100" id="hnt-3h-hNF"/>
+                            <constraint firstItem="xag-Dq-7xd" firstAttribute="leading" secondItem="dpW-ZC-D9l" secondAttribute="leading" constant="59" id="rNV-KS-0RJ"/>
+                            <constraint firstItem="oBV-SH-Fo9" firstAttribute="top" secondItem="JPJ-37-x03" secondAttribute="bottom" constant="36" id="uAY-dr-jAO"/>
+                            <constraint firstItem="6Q3-0f-5gu" firstAttribute="leading" secondItem="dpW-ZC-D9l" secondAttribute="leading" constant="100" id="yWx-7r-kRe"/>
+                            <constraint firstItem="198-gR-Rrv" firstAttribute="top" secondItem="JPJ-37-x03" secondAttribute="bottom" constant="36" id="yjR-fY-LRd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dpW-ZC-D9l"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8J-gt-nPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-452" y="15"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ily-iM-sLC"/>
+    </inferredMetricsTieBreakers>
+</document>
