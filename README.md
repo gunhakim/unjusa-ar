@@ -1,7 +1,7 @@
 # 운주사 AR  
 전라남도 화순의 운주사의 석탑과 석불을 ar로 구현
 
-## 데모
+## demo
 ![Alt text](/demo/삼층석탑.jpeg)  
 ![Alt text](/demo/석상1.jpeg)  
 
